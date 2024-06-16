@@ -1,14 +1,14 @@
 import './App.css';
 import React, {useState} from 'react';
-import About from './components/About';
+// import About from './components/About';
 import Navbar from './components/Navbar';
 import Textform from './components/Textform'; 
 import Alert from './components/Alert';
-import {
-  BrowserRouter,
-  Routes,
-  Route
-} from "react-router-dom";
+// import {
+//   BrowserRouter,
+//   Routes,
+//   Route
+// } from "react-router-dom";
 
 
 function App() {
@@ -50,16 +50,17 @@ function App() {
 
   return (
    <>
-   <BrowserRouter>
+   {/* <BrowserRouter> */}
   <Navbar title="TextUtils" aboutText="About Textutils" mode={mode} changemode={changemode}/>
   <Alert alert={alert} />
   <div className={`container my-3`}>
-    <Routes>
-    <Route exact path="/about" element={<About/>}></Route>
-    <Route exact path="/" element={<Textform Heading="Enter the text to convert" showalert={showalert} mode={mode} />}></Route> 
-    </Routes>
+    {/* <Routes> */}
+    {/* <Route exact path="/about" element={<About/>}></Route>
+    <Route exact path="/" element={<Textform Heading="Enter the text to convert" showalert={showalert} mode={mode} />}></Route>  */}
+    <Textform Heading="Enter the text to convert" showalert={showalert} mode={mode} />
+    {/* </Routes> */}
  </div>
-    </BrowserRouter>
+    {/* </BrowserRouter> */}
 
    </>
   );
